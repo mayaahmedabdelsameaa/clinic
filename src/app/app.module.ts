@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule } from '@angular/router'
+import { MatSnackBarModule } from '@angular/material/snack-bar';
 
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -16,6 +17,7 @@ import { AppointmentModule } from './appointment/appointment.module';
 import { InvoiceModule } from './invoice/invoice.module';
 import { MedicineModule } from './medicine/medicine.module';
 import { PatientModule } from './patient/patient.module';
+import { AppRoutingModule } from './app-routing.module';
 
 @NgModule({
   declarations: [
@@ -29,6 +31,7 @@ import { PatientModule } from './patient/patient.module';
     BrowserAnimationsModule,
     MatterialUiModule,
     RouterModule,
+    AppRoutingModule,
     AppointmentModule,
     ClinicModule,
     DoctorModule,
@@ -37,6 +40,7 @@ import { PatientModule } from './patient/patient.module';
     MedicineModule,
     PatientModule,
     PrescriptionModule,
+    MatSnackBarModule,
 
   ],
   providers: [],
