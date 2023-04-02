@@ -6,14 +6,14 @@ import { EmployeeListComponent } from './employee-list/employee-list.component';
 import { EmployeeUpdateComponent } from './employee-update/employee-update.component';
 
 const routes: Routes = [
-  {path: '', component:EmployeeProfileComponent},
-  {path:'add',component: EmployeeAddComponent},
-  {path: 'list', component: EmployeeListComponent},
-  {path: 'update', component: EmployeeUpdateComponent}
+  { path: '', component: EmployeeProfileComponent },
+  { path: 'add', component: EmployeeAddComponent },
+  { path: 'list', component: EmployeeListComponent },
+  { path: 'update', component: EmployeeUpdateComponent },
 ];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class EmployeeRoutingModule { }
+export class EmployeeRoutingModule {}
