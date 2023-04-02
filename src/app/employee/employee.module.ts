@@ -20,7 +20,7 @@ import { EmployeeProfileComponent } from './employee-profile/employee-profile.co
     CommonModule,
     EmployeeRoutingModule,
     FormsModule,
-    ReactiveFormsModule
-  ]
+    ReactiveFormsModule,
+  ],
 })
 export class EmployeeModule { }
