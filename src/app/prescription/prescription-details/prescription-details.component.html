@@ -1,1 +1,18 @@
-<p>prescription-details works!</p>
+<div class="row justify-content-center align-items-center mt-5">
+  <div class="card col-md-5 col-sm-8">
+    <div class="card-body">
+      <h5 class="card-title text-center mb-3">Prescription</h5>
+      <ul class="list-unstyled">
+        <li><strong>Date: </strong>{{ data.prescriptionDate }}</li>
+        <li><strong>Doctor Name: </strong>{{ data.doctorId.firstName }} {{ data.doctorId.lastName }}</li>
+        <li><strong>Clinic Name: </strong>{{ data.clinicName }}</li>
+        <li>
+          <strong>Medecine: </strong>
+          <ul class="list-unstyled">
+            <li *ngfor="let medecine of mediciens">{{medecine.name}}</li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>

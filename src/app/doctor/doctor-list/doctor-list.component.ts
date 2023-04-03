@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { DoctorService } from '../Services/doctor.service';
+import { DoctorService } from 'src/app/services/doctor.service';
 import { faCoffee } from '@fortawesome/free-solid-svg-icons';
 @Component({
   selector: 'app-doctor-list',
