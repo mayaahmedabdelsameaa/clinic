@@ -23,7 +23,7 @@ import { DoctorProfileComponent } from './doctor-profile/doctor-profile.componen
   ],
   imports: [
     CommonModule,
-    DoctorRoutingModule
+    DoctorRoutingModule,
   ]
 })
 export class DoctorModule { }
