@@ -10,7 +10,7 @@ export class DoctorListComponent {
   doctors:any=[];
   faCoffee = faCoffee;
   constructor(public doctorService:DoctorService){
-  
+
   }
   // ngOnInit(){
   //   this.doctorService.getAllDoctors().subscribe(data=>{
@@ -18,7 +18,7 @@ export class DoctorListComponent {
   //      this.doctors=data;
   //      this.doctors=this.doctors[0].data[0];
   //     console.log(this.doctors);
-      
+
   //   })
   // }
 }

@@ -36,7 +36,6 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     AppRoutingModule,
     AppointmentModule,
     ClinicModule,
-    DoctorModule,
     EmployeeModule,
     InvoiceModule,
     MedicineModule,
@@ -44,6 +43,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     PrescriptionModule,
     MatSnackBarModule,
     SharedModule,
+    DoctorModule,
     FontAwesomeModule
 
   ],
