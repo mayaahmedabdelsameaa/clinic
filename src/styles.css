@@ -1,4 +1,19 @@
 /* You can add global styles to this file, and also import other style files */
+<<<<<<< HEAD
 @import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+=======
+
+@import './assets/doctor-assets/css/style';
+@import '@fortawesome/fontawesome-free/css/all.min.css';
+html,
+body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+>>>>>>> 389641dd2a6ddcbc9f004ea3af1821ee7cc7fba4

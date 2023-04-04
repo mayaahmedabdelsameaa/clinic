@@ -9,6 +9,8 @@ import { DoctorUpdateComponent } from './doctor-update/doctor-update.component';
 import { DoctorDetailsComponent } from './doctor-details/doctor-details.component';
 import { DoctorListByClinicComponent } from './doctor-list-by-clinic/doctor-list-by-clinic.component';
 import { DoctorProfileComponent } from './doctor-profile/doctor-profile.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { MatIconModule } from '@angular/material/icon';
 
 
 @NgModule({
@@ -24,6 +26,8 @@ import { DoctorProfileComponent } from './doctor-profile/doctor-profile.componen
   imports: [
     CommonModule,
     DoctorRoutingModule,
+    FontAwesomeModule,
+    MatIconModule
   ]
 })
 export class DoctorModule { }

@@ -1,10 +1,11 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './shared/home/home.component';
+import { NotFoundComponent } from './shared/notfound/not-found/not-found.component';
 
 const routes: Routes = [
-  { path: '', component: HomeComponent },
-
+  {path:"home",component:HomeComponent},
+  {path:"",redirectTo:"/home",pathMatch:'full'},
   {
     path: 'auth',
     loadChildren: () =>
@@ -43,7 +44,7 @@ const routes: Routes = [
   },
 
   {
-    path: 'doctor',
+    path:"doctor",
     loadChildren: () =>
       import('./doctor/doctor.module').then((e) => e.DoctorModule),
   },
@@ -56,7 +57,7 @@ const routes: Routes = [
       ),
   },
 
-  { path: '**', component: HomeComponent },
+  { path: '**', component: NotFoundComponent },
 ];
 
 @NgModule({
