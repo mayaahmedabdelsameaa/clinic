@@ -7,7 +7,7 @@ import { EmployeeListComponent } from './employee-list/employee-list.component';
 import { EmployeeAddComponent } from './employee-add/employee-add.component';
 import { EmployeeUpdateComponent } from './employee-update/employee-update.component';
 import { EmployeeProfileComponent } from './employee-profile/employee-profile.component';
-
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -21,6 +21,7 @@ import { EmployeeProfileComponent } from './employee-profile/employee-profile.co
     EmployeeRoutingModule,
     FormsModule,
     ReactiveFormsModule,
+    HttpClientModule
   ],
 })
 export class EmployeeModule { }

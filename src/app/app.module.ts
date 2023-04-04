@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { NgModule} from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule } from '@angular/router'
 import { MatSnackBarModule } from '@angular/material/snack-bar';
@@ -12,7 +12,7 @@ import { FooterComponent } from './core/footer/footer.component';
 import { EmployeeModule } from './employee/employee.module';
 import { DoctorModule } from './doctor/doctor.module';
 import { ClinicModule } from './clinic/clinic.module';
-import { PrescriptionModule } from './prescription/prescription.module';
+// import { PrescriptionModule } from './prescription/prescription.module';
 import { AppointmentModule } from './appointment/appointment.module';
 import { InvoiceModule } from './invoice/invoice.module';
 import { MedicineModule } from './medicine/medicine.module';
@@ -39,7 +39,7 @@ import { AppRoutingModule } from './app-routing.module';
     InvoiceModule,
     MedicineModule,
     PatientModule,
-    PrescriptionModule,
+    // PrescriptionModule,
     MatSnackBarModule,
 
   ],

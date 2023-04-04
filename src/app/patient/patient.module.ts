@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
+import { ReactiveFormsModule,FormsModule } from '@angular/forms';
 import { PatientRoutingModule } from './patient-routing.module';
 import { PatientDetailsComponent } from './patient-details/patient-details.component';
 import { PatientAddComponent } from './patient-add/patient-add.component';
@@ -9,6 +10,7 @@ import { PatientListByDoctorComponent } from './patient-list-by-doctor/patient-l
 import { PatientListByClinicComponent } from './patient-list-by-clinic/patient-list-by-clinic.component';
 import { PatientUpdateComponent } from './patient-update/patient-update.component';
 import { PatientProfileComponent } from './patient-profile/patient-profile.component';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -19,11 +21,14 @@ import { PatientProfileComponent } from './patient-profile/patient-profile.compo
     PatientListByDoctorComponent,
     PatientListByClinicComponent,
     PatientUpdateComponent,
-    PatientProfileComponent
+    PatientProfileComponent,
   ],
   imports: [
     CommonModule,
-    PatientRoutingModule
+    PatientRoutingModule,
+    FormsModule,
+    ReactiveFormsModule,
+    HttpClientModule
   ]
 })
 export class PatientModule { }

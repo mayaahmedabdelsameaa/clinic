@@ -1,4 +1,4 @@
-export class Patient {
+export class User {
     constructor(
         public _id:number,
         public fname:string,
@@ -7,8 +7,9 @@ export class Patient {
         public telephone:number,
         public gender:string,
         public address:{city:string,street:string,building:number},
-        public appointment:Number,
-        public email: string 
+        public email:string,
+        public role:string,
+        public salary:number,
+        public vezeeta:number,
         ){}
 }
-  
