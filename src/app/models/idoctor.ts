@@ -10,12 +10,13 @@ export interface IDoctor {
     age: number;
     gender: string;
     degrees:string,
+    location:string,
     clinic: number;
     appointments: number[];
         schedule:{
         timeSlots:TimeSlot[]
         },
-        
+       
      image: string;
      role: string;
 }
