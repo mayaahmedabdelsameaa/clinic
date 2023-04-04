@@ -11,6 +11,13 @@ import { DoctorListByClinicComponent } from './doctor-list-by-clinic/doctor-list
 import { DoctorProfileComponent } from './doctor-profile/doctor-profile.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { MatIconModule } from '@angular/material/icon';
+import { MyPatientsComponent } from './my-patients/my-patients.component';
+import { MyAppointmentsComponent } from './my-appointments/my-appointments.component';
+import { AppointmentModule } from '../appointment/appointment.module';
+import { MatterialUiModule } from '../shared/matterial-ui/matterial-ui.module';
+import { MatChipsModule } from '@angular/material/chips';
+
+
 
 
 @NgModule({
@@ -21,13 +28,19 @@ import { MatIconModule } from '@angular/material/icon';
     DoctorUpdateComponent,
     DoctorDetailsComponent,
     DoctorListByClinicComponent,
-    DoctorProfileComponent
+    DoctorProfileComponent,
+    MyPatientsComponent,
+    MyAppointmentsComponent,
+    
   ],
   imports: [
     CommonModule,
     DoctorRoutingModule,
     FontAwesomeModule,
-    MatIconModule
+    MatIconModule,
+    AppointmentModule,
+    MatterialUiModule,
+    MatChipsModule 
   ]
 })
 export class DoctorModule { }
