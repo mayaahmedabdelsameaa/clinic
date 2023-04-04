@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { RouterModule } from '@angular/router'
+import { RouterModule } from '@angular/router';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 
 import { AppComponent } from './app.component';
@@ -28,7 +28,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     AppComponent,
     NotFoundComponent,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
   ],
   imports: [
     BrowserModule,
@@ -48,10 +48,9 @@ import { ReactiveFormsModule } from '@angular/forms';
     DoctorModule,
     FontAwesomeModule,
     HttpClientModule,
-    ReactiveFormsModule
-
+    ReactiveFormsModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

@@ -5,30 +5,18 @@ import { IDoctor } from 'src/app/models/idoctor';
 @Component({
   selector: 'app-doctor-list',
   templateUrl: './doctor-list.component.html',
-  styleUrls: ['./doctor-list.component.css']
+  styleUrls: ['./doctor-list.component.css'],
 })
 export class DoctorListComponent {
-  doctors:IDoctor[]=[];
+  doctors: IDoctor[] = [];
   faCoffee = faCoffee;
-  constructor(public doctorService:DoctorService){
-
-  }
-  // ngOnInit(){
-  //   this.doctorService.getAllDoctors().subscribe(data=>{
-  //     console.log(data);
-  //      this.doctors=data;
-  //      this.doctors=this.doctors[0].data[0];
-  //     console.log(this.doctors);
-
-  //   })
-  // }
-  ngOnInit(){
-    this.doctorService.getAllDoctors().subscribe(data=>{
+  constructor(public doctorService: DoctorService) {}
+  ngOnInit() {
+    this.doctorService.getAllDoctors().subscribe((data) => {
       console.log(data);
-        this.doctors=data;
+      this.doctors = data;
 
       console.log(this.doctors);
-
-    })
+    });
   }
 }

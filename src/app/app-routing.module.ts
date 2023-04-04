@@ -4,8 +4,10 @@ import { HomeComponent } from './shared/home/home.component';
 import { NotFoundComponent } from './shared/notfound/not-found/not-found.component';
 
 const routes: Routes = [
-  {path:"home",component:HomeComponent},
-  {path:"",redirectTo:"/home",pathMatch:'full'},
+  { path: 'home', component: HomeComponent },
+
+  { path: '', redirectTo: '/home', pathMatch: 'full' },
+
   {
     path: 'employee',
     loadChildren: () =>
@@ -39,7 +41,7 @@ const routes: Routes = [
   },
 
   {
-    path:"doctor",
+    path: 'doctor',
     loadChildren: () =>
       import('./doctor/doctor.module').then((e) => e.DoctorModule),
   },
