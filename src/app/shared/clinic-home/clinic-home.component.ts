@@ -14,7 +14,7 @@ export class ClinicHomeComponent implements OnInit {
   constructor(private clinicServices: ClinicService) {}
 
   ngOnInit(): void {
-    this.clinicServices.getAll().subscribe((data) => {
+    this.clinicServices.getAll().subscribe((data:any) => {
       console.table(data.data);
       this.clinic = data.data;
     });

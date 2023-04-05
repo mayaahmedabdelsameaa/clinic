@@ -22,6 +22,7 @@ import { DoctorService } from 'src/app/services/doctor.service';
 import { PatientService } from 'src/app/services/patient.service';
 import { MedicineService } from 'src/app/services/medicine.service';
 import { InvoiceService } from 'src/app/services/invoice.service';
+import { invoicePost } from 'src/app/models/invoicePost';
 @Component({
   selector: 'app-prescription-add',
   templateUrl: './prescription-add.component.html',
@@ -30,13 +31,13 @@ import { InvoiceService } from 'src/app/services/invoice.service';
 export class PrescriptionAddComponent {
   prescription!: PrescriptionPost;
   clinics: any[] = [];
-  // doctors: IDoctor[] = [];
+  doctors: IDoctor[] = [];
   medicines: any[] = [];
   medicineIds: any[] = [];
   patient!: any;
   patientId!: number;
   medicineMap!: Map<string, number>;
-  // invoiceDetails!: invoicePost;
+  invoiceDetails!: invoicePost;
   vezeeta!:number
   constructor(
     private route: ActivatedRoute,
