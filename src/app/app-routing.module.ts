@@ -11,6 +11,11 @@ const routes: Routes = [
     loadChildren: () => import('./auth/auth.module').then((e) => e.AuthModule),
   },
   {
+    path: 'admin',
+    loadChildren: () =>
+      import('./admin/admin.module').then((e) => e.AdminModule),
+  },
+  {
     path: 'employee',
     loadChildren: () =>
       import('./employee/employee.module').then((e) => e.EmployeeModule),
@@ -22,13 +27,13 @@ const routes: Routes = [
       import('./patient/patient.module').then((e) => e.PatientModule),
   },
 
-  // {
-  //   path: 'prescription',
-  //   loadChildren: () =>
-  //     import('./prescription/prescription.module').then(
-  //       (e) => e.PrescriptionModule
-  //     ),
-  // },
+  {
+    path: 'prescription',
+    loadChildren: () =>
+      import('./prescription/prescription.module').then(
+        (e) => e.PrescriptionModule
+      ),
+  },
 
   {
     path: 'invoice',

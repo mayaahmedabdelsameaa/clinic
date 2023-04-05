@@ -159,11 +159,11 @@ export class EmployeeUpdateComponent {
   }
 
   ngOnInit(): void {
-    // this.clinicServices.getAll().subscribe((c:any)=>{
-    //   this.clinics=c.data;
-    //   console.log(this.clinics);
-    // })
-    this.empid = parseInt(sessionStorage.getItem('userId')!);
+    this.clinicServices.getAll().subscribe((c:any)=>{
+      this.clinics=c;
+      console.log(this.clinics, "clinic");
+    })
+    this.empid = parseInt(sessionStorage.getItem('empid')!);
     this.employeeService.getById(this.empid).subscribe((employee) => {
       this.emp = employee;
       console.log(this.emp);

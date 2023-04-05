@@ -153,7 +153,9 @@ export class EmployeeAddComponent {
   }
 
   onSubmit() {
-    this.addingForm.value.clinicid = parseInt(this.addingForm.value.clinicid!);
+
+    // let result ={"firstName": this.getFname(), "lastName": this.getLname(), "empAge": this.getAge(),  };
+    this.addingForm.value.clinicId = parseInt(this.addingForm.value.clinicId!);
     console.log(typeof this.addingForm.value.clinicid, 'typeOf');
     console.log('from ts', this.addingForm.value);
     this.employeeService.add(this.addingForm.value).subscribe(
@@ -164,8 +166,8 @@ export class EmployeeAddComponent {
 
   ngOnInit(): void {
     this.clinicServices.getAll().subscribe((c: any) => {
-      this.clinics = c.data;
-      console.log(this.clinics);
+      this.clinics = c;
+      console.log(this.clinics, c);
     });
   }
 }
