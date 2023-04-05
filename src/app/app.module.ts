@@ -19,7 +19,7 @@ import { MedicineModule } from './medicine/medicine.module';
 import { PatientModule } from './patient/patient.module';
 import { AppRoutingModule } from './app-routing.module';
 import { SharedModule } from './shared/shared.module';
-// import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { HttpClientModule } from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms';
 
@@ -46,6 +46,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     // PrescriptionModule,
     MatSnackBarModule,
     SharedModule,
+    FontAwesomeModule
 
   ],
   providers: [],
