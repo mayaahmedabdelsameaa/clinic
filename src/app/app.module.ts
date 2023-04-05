@@ -45,8 +45,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     // PrescriptionModule,
     MatSnackBarModule,
     SharedModule,
-    DoctorModule,
     FontAwesomeModule,
+    DoctorModule,
     HttpClientModule,
     ReactiveFormsModule,
 
