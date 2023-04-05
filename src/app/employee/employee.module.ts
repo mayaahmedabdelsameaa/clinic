@@ -13,13 +13,15 @@ import { AppointmentModule } from '../appointment/appointment.module';
 import { MatterialUiModule } from '../shared/matterial-ui/matterial-ui.module';
 import { MatChipsModule } from '@angular/material/chips';
 import { HttpClientModule } from '@angular/common/http';
+import { AppointmentClinicComponent } from './appointment-clinic/appointment-clinic.component';
 
 @NgModule({
   declarations: [
     EmployeeListComponent,
     EmployeeAddComponent,
     EmployeeUpdateComponent,
-    EmployeeProfileComponent
+    EmployeeProfileComponent,
+    AppointmentClinicComponent
   ],
   imports: [
     CommonModule,
@@ -29,8 +31,8 @@ import { HttpClientModule } from '@angular/common/http';
     FontAwesomeModule,
     MatIconModule,
     MatterialUiModule,
-    MatChipsModule
-    HttpClientModule
+    MatChipsModule,
+    HttpClientModule,
   ],
 })
 export class EmployeeModule { }

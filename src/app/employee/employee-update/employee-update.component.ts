@@ -164,7 +164,7 @@ export class EmployeeUpdateComponent {
     //   this.clinics=c.data;
     //   console.log(this.clinics);
     // })
-    this.empid = parseInt(sessionStorage.getItem('empid')!);
+    this.empid = parseInt(sessionStorage.getItem('userId')!);
     this.employeeService.getById(this.empid).subscribe((employee) => {
       this.emp = employee;
       console.log(this.emp);

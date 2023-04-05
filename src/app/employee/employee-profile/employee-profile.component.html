@@ -26,13 +26,13 @@
                       <div class="widget-profile pro-widget-content">
                           <div class="profile-info-widget">
                               <a href="#" class="booking-doc-img">
-                                  <img [src]="emp.image" alt="User Image">
+                                  <img src="https://fakeimg.pl/300/" alt="User Image">
 
                               </a>
                               <div class="profile-det-info">
-                                  <h3>Dr. {{emp.firstName}} {{emp.lastName}}</h3>
+                                  <h3>{{emp.firstName}} {{emp.lastName}}</h3>
                                   <div class="patient-details">
-                                      <h5 class="mb-0">{{emp.clinicId.name}}</h5>
+                                      <h5 class="mb-0">{{emp.email}}</h5>
                                   </div>
                               </div>
                           </div>
@@ -47,15 +47,9 @@
                                       </a>
                                   </li>
                                   <li routerLinkActive="active">
-                                      <a  [routerLink]="['Appointments']">
+                                      <a  [routerLink]="['appointments']">
                                           <i class="fas fa-calendar-check"></i>
                                           <span>Appointments</span>
-                                      </a>
-                                  </li>
-                                  <li routerLinkActive="active">
-                                      <a [routerLink]="['Patients']">
-                                          <i class="fas fa-user-injured"></i>
-                                          <span>Clinic Patients</span>
                                       </a>
                                   </li>
                                   <li>

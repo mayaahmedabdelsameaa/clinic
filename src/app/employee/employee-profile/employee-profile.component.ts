@@ -15,9 +15,8 @@ export class EmployeeProfileComponent implements OnInit {
     public patientService: PatientService
   ) {}
   ngOnInit(): void {
-    this.employeeService.getById(18).subscribe((emloyee: any) => {
-      this.emp = emloyee;
-      console.log(this.emp);
+    this.employeeService.getById(parseInt(sessionStorage.getItem('userId')!)).subscribe((employee: any) => {
+      this.emp = employee;
     });
   }
 }
