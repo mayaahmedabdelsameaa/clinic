@@ -4,7 +4,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { Prescription } from 'src/app/models/prescription';
 import { PrescriptionPost } from 'src/app/models/prescription-post';
 import { Clinic } from 'src/app/models/clinic';
-import { Doctor } from 'src/app/models/doctor';
+import { IDoctor } from 'src/app/models/idoctor';
 
 import {
   FormBuilder,

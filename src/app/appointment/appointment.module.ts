@@ -10,7 +10,6 @@ import { AppointmentListByClinicComponent } from './appointment-list-by-clinic/a
 import { MatChipsModule } from '@angular/material/chips';
 import { ReactiveFormsModule } from '@angular/forms';
 // MatterialUiModule,
-     
 
 @NgModule({
   declarations: [
@@ -18,14 +17,14 @@ import { ReactiveFormsModule } from '@angular/forms';
     AppointmentListComponent,
     AppointmentListByPatientComponent,
     AppointmentListByDoctorComponent,
-    AppointmentListByClinicComponent
+    AppointmentListByClinicComponent,
   ],
   imports: [
     CommonModule,
     AppointmentRoutingModule,
     MatChipsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
   ],
-  exports:[AppointmentAddComponent]
+  exports: [AppointmentAddComponent],
 })
-export class AppointmentModule { }
+export class AppointmentModule {}

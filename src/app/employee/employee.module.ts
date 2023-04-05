@@ -21,7 +21,7 @@ import { AppointmentClinicComponent } from './appointment-clinic/appointment-cli
     EmployeeAddComponent,
     EmployeeUpdateComponent,
     EmployeeProfileComponent,
-    AppointmentClinicComponent
+    AppointmentClinicComponent,
   ],
   imports: [
     CommonModule,
@@ -35,4 +35,4 @@ import { AppointmentClinicComponent } from './appointment-clinic/appointment-cli
     HttpClientModule,
   ],
 })
-export class EmployeeModule { }
+export class EmployeeModule {}
