@@ -1,4 +1,4 @@
-import { NgModule} from '@angular/core';
+import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule } from '@angular/router';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
@@ -39,7 +39,6 @@ import { ReactiveFormsModule } from '@angular/forms';
     AppRoutingModule,
     AppointmentModule,
     ClinicModule,
-    DoctorModule,
     EmployeeModule,
     InvoiceModule,
     MedicineModule,
@@ -48,6 +47,9 @@ import { ReactiveFormsModule } from '@angular/forms';
     MatSnackBarModule,
     SharedModule,
     FontAwesomeModule,
+    DoctorModule,
+    HttpClientModule,
+    ReactiveFormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
