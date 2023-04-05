@@ -7,22 +7,22 @@
           <input type="date" min="{{ today | date : 'yyyy-MM-dd' }}" class="form-control" id="exampleInputDate"
             name="prescriptionDate" formControlName="prescriptionDate" />
         </div>
-        <div class="mb-3">
+        <!-- <div class="mb-3">
           <label for="exampleInputClinic" class="form-label">Clinic</label>
           <select name="" id="exampleInputClinic" class="form-control" formControlName="clinicid" #selectedClinic (change)="getDoctorsOfClinic(selectedClinic.value)">
             <option value="{{ item._id }}" *ngFor="let item of clinics">{{ item.name }}</option>
           </select>
-        </div>
+        </div> -->
         <div class="mb-3">
           <label for="exampleInputFirst" class="form-label">Patient</label>
           <input type="text" class="form-control" id="exampleInputFirst" name="patientid" formControlName="patientid" (blur)="onPatientChange()" />
         </div>
-        <div class="mb-3">
+        <!-- <div class="mb-3">
           <label for="exampleInputFirst" class="form-label">Doctor</label>
           <select id="exampleInputFirst" name="doctorid" formControlName="doctorid" class="form-control">
             <option value="{{item._id}}" *ngFor="let item of doctors">{{item.firstName}} {{item.lastName}}</option>
           </select>
-        </div>
+        </div> -->
         <div class="mb-3">
           <label for="exampleInputFirst" class="form-label">Medicine</label>
           <div>

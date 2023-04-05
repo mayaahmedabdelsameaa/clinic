@@ -84,34 +84,25 @@ export class PrescriptionAddComponent {
   ngOnInit(): void {
 
     this.getDate()?.patchValue(formatDate(new Date(), 'yyyy-MM-dd', 'en'));
-    this.prescriptionService.getAll().subscribe(
-      (a) => console.log(a, 'presc'),
-      (error) => console.log(error)
-    );
-    this.clinicServices.getAll().subscribe(
-      (a: any) => {
-        this.clinics = a.data;
-      },
-      (error) => console.log(error)
-    );
+    
 
     this.patientService.getAllPatients().subscribe(
       (a: any) => {
         this.patient = a;
-        console.log(this.patient, "patient");
-        console.log(a);
       },
       (error) => console.log(error)
     );
+
 
     this.medicineService.getAllMedicine().subscribe((med:any)=>{
       med.data.forEach((element:any) => {
         this.medicineMap.set(element.name, element._id);
       });
     })
-    //Number(sessionStorage.getItem("userId"))
-    this.doctorService.getDoctorById(4).subscribe((a:any)=>{
-      this.vezeeta = a.vezeeta
+    this.doctorService.getDoctorById(parseInt(sessionStorage.getItem('userId')!)).subscribe((a:any)=>{
+      this.vezeeta = a.vezeeta;
+      this.getClinic()?.patchValue(a.clinic._id);
+      console.log(a.clinic._id, "id", this.addingForm.value.clinicid);
     })
   }
   getDate() {
@@ -124,7 +115,7 @@ export class PrescriptionAddComponent {
     return this.addingForm.get('patientid');
   }
   getDoctor() {
-    return this.addingForm.get('doctorid');
+    return parseInt(sessionStorage.getItem('userId')!);
   }
   get Medecine() {
     return this.addingForm.controls['medicineid'] as FormArray;
@@ -132,12 +123,12 @@ export class PrescriptionAddComponent {
   getDoctorsOfClinic(id: string) {
     const clinicId = parseInt(id);
     this.clinicServices.getById(clinicId).subscribe((res: any) => {
+      console.log(res);
       this.doctors = res.data.doctor;
     });
   }
   onPatientChange() {
     let patientName = this.getPatient()?.value;
-    console.log(patientName);
     if (patientName) {
       for(let i = 0; i < this.patient.length; i++) {
         if (this.patient[i].fname + ' ' + this.patient[i].lname == patientName) {
@@ -147,13 +138,6 @@ export class PrescriptionAddComponent {
           console.log('not equal');
         }
       }
-      // this.patient.foreach((element: any) => {
-      //   if (element.fname + ' ' + element.lname == patientName) {
-      //     this.patientId = element._id;
-      //   } else {
-      //     console.log('not equal');
-      //   }
-      // });
     }
   }
   onSubmit() {
@@ -164,7 +148,8 @@ export class PrescriptionAddComponent {
       }
     })
     const clinicId = parseInt(this.addingForm.value.clinicid!);
-    const doctorId = parseInt(this.addingForm.value.doctorid!);
+    const doctorId = parseInt(sessionStorage.getItem('userId')!);
+    console.log(clinicId, ",", doctorId, "clinic and doctor");
     for(let i =0 ; i < this.medicineIds.length;i++){
       this.postform.value.medicineid?.push(this.medicineIds[i]);
     }
@@ -174,7 +159,7 @@ export class PrescriptionAddComponent {
       patientid: this.patientId,
       prescriptionDate: this.addingForm.get('prescriptionDate')?.value,
     });
-
+    console.log(typeof(this.postform.value.doctorid));
     this.prescriptionService.add(this.postform.value!).subscribe((a:any)=>console.log(a), error=>console.log(error));
     this.invoiceDetails = {
       patientId: this.patientId,
