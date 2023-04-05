@@ -12,7 +12,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { AppointmentModule } from '../appointment/appointment.module';
 import { MatterialUiModule } from '../shared/matterial-ui/matterial-ui.module';
 import { MatChipsModule } from '@angular/material/chips';
-
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -29,7 +29,8 @@ import { MatChipsModule } from '@angular/material/chips';
     FontAwesomeModule,
     MatIconModule,
     MatterialUiModule,
-    MatChipsModule 
+    MatChipsModule
+    HttpClientModule
   ],
 })
 export class EmployeeModule { }

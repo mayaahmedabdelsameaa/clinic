@@ -9,6 +9,11 @@ const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
 
   {
+    path: 'auth',
+    loadChildren: () =>
+      import('./auth/auth.module').then((e) => e.AuthModule),
+  },
+  {
     path: 'employee',
     loadChildren: () =>
       import('./employee/employee.module').then((e) => e.EmployeeModule),
@@ -20,13 +25,13 @@ const routes: Routes = [
       import('./patient/patient.module').then((e) => e.PatientModule),
   },
 
-  {
-    path: 'prescription',
-    loadChildren: () =>
-      import('./prescription/prescription.module').then(
-        (e) => e.PrescriptionModule
-      ),
-  },
+  // {
+  //   path: 'prescription',
+  //   loadChildren: () =>
+  //     import('./prescription/prescription.module').then(
+  //       (e) => e.PrescriptionModule
+  //     ),
+  // },
 
   {
     path: 'invoice',

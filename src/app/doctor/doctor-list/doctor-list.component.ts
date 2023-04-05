@@ -11,8 +11,9 @@ export class DoctorListComponent {
   doctors: IDoctor[] = [];
   faCoffee = faCoffee;
   constructor(public doctorService: DoctorService) {}
-  ngOnInit() {
-    this.doctorService.getAllDoctors().subscribe((data) => {
+
+  ngOnInit(){
+    this.doctorService.getAllDoctors().subscribe(data=>{
       console.log(data);
       this.doctors = data;
 

@@ -12,9 +12,9 @@ import { AppointmentAddComponent } from '../appointment/appointment-add/appointm
 
 const routes: Routes = [
   { path: '', component: DoctorProfileComponent },
+  { path: 'add', component: DoctorAddComponent },
   { path: 'list', component: DoctorListComponent },
   { path: 'listClinic', component: DoctorListByClinicComponent },
-  { path: 'add', component: DoctorAddComponent },
   { path: 'update', component: DoctorUpdateComponent },
   { path: 'schedule', component: DoctorScheduleComponent },
   { path: 'Profile', component: DoctorProfileComponent,children:[

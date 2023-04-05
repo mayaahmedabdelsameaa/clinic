@@ -13,7 +13,7 @@ const routes: Routes = [
   { path: 'add', component: PatientAddComponent },
   { path: 'list', component: PatientListComponent },
   { path: 'details', component: PatientDetailsComponent },
-  { path: 'update', component: PatientUpdateComponent },
+  { path: 'update/:id', component: PatientUpdateComponent },
   { path: 'listByClinic', component: PatientListByClinicComponent },
   { path: 'listByDoctor', component: PatientListByDoctorComponent },
 ];
