@@ -9,8 +9,16 @@ import { DoctorUpdateComponent } from './doctor-update/doctor-update.component';
 import { DoctorDetailsComponent } from './doctor-details/doctor-details.component';
 import { DoctorListByClinicComponent } from './doctor-list-by-clinic/doctor-list-by-clinic.component';
 import { DoctorProfileComponent } from './doctor-profile/doctor-profile.component';
-import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+// import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { MatIconModule } from '@angular/material/icon';
+import { MyPatientsComponent } from './my-patients/my-patients.component';
+import { MyAppointmentsComponent } from './my-appointments/my-appointments.component';
+import { AppointmentModule } from '../appointment/appointment.module';
+import { MatterialUiModule } from '../shared/matterial-ui/matterial-ui.module';
+import { MatChipsModule } from '@angular/material/chips';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+
+
 
 
 @NgModule({
@@ -21,13 +29,20 @@ import { MatIconModule } from '@angular/material/icon';
     DoctorUpdateComponent,
     DoctorDetailsComponent,
     DoctorListByClinicComponent,
-    DoctorProfileComponent
+    DoctorProfileComponent,
+    MyPatientsComponent,
+    MyAppointmentsComponent,
+    
   ],
   imports: [
     CommonModule,
     DoctorRoutingModule,
-    FontAwesomeModule,
-    MatIconModule
+    // FontAwesomeModule,
+    MatIconModule,
+    AppointmentModule,
+    MatterialUiModule,
+    MatChipsModule,
+    ReactiveFormsModule 
   ]
 })
 export class DoctorModule { }

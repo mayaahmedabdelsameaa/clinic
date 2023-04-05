@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { NgModule} from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule } from '@angular/router';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
@@ -13,7 +13,7 @@ import { FooterComponent } from './core/footer/footer.component';
 import { EmployeeModule } from './employee/employee.module';
 import { DoctorModule } from './doctor/doctor.module';
 import { ClinicModule } from './clinic/clinic.module';
-import { PrescriptionModule } from './prescription/prescription.module';
+// import { PrescriptionModule } from './prescription/prescription.module';
 import { AppointmentModule } from './appointment/appointment.module';
 import { InvoiceModule } from './invoice/invoice.module';
 import { MedicineModule } from './medicine/medicine.module';
@@ -21,6 +21,8 @@ import { PatientModule } from './patient/patient.module';
 import { AppRoutingModule } from './app-routing.module';
 import { SharedModule } from './shared/shared.module';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { HttpClientModule } from '@angular/common/http';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -42,7 +44,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     InvoiceModule,
     MedicineModule,
     PatientModule,
-    PrescriptionModule,
+    // PrescriptionModule,
     MatSnackBarModule,
     SharedModule,
     FontAwesomeModule,
