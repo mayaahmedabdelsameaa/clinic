@@ -4,8 +4,8 @@ import { HomeComponent } from './shared/home/home.component';
 import { NotFoundComponent } from './shared/notfound/not-found/not-found.component';
 
 const routes: Routes = [
-  {path:"home",component:HomeComponent},
-  {path:"",redirectTo:"/home",pathMatch:'full'},
+  { path: 'home', component: HomeComponent },
+  { path: '', redirectTo: '/home', pathMatch: 'full' },
   {
     path: 'employee',
     loadChildren: () =>
@@ -37,9 +37,13 @@ const routes: Routes = [
     loadChildren: () =>
       import('./clinic/clinic.module').then((e) => e.ClinicModule),
   },
-
   {
-    path:"doctor",
+    path: 'medicine',
+    loadChildren: () =>
+      import('./medicine/medicine.module').then((e) => e.MedicineModule),
+  },
+  {
+    path: 'doctor',
     loadChildren: () =>
       import('./doctor/doctor.module').then((e) => e.DoctorModule),
   },

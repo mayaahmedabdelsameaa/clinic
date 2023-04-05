@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { RouterModule } from '@angular/router'
+import { RouterModule } from '@angular/router';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 
 import { AppComponent } from './app.component';
@@ -9,6 +9,7 @@ import { MatterialUiModule } from 'src/app/shared/matterial-ui/matterial-ui.modu
 import { NotFoundComponent } from './shared/notfound/not-found/not-found.component';
 import { HeaderComponent } from './core/header/header.component';
 import { FooterComponent } from './core/footer/footer.component';
+// import { EmployeeModule } from './employee/employee.module';
 import { EmployeeModule } from './employee/employee.module';
 import { DoctorModule } from './doctor/doctor.module';
 import { ClinicModule } from './clinic/clinic.module';
@@ -26,7 +27,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     AppComponent,
     NotFoundComponent,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
   ],
   imports: [
     BrowserModule,
@@ -44,10 +45,9 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     PrescriptionModule,
     MatSnackBarModule,
     SharedModule,
-    FontAwesomeModule
-
+    FontAwesomeModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
