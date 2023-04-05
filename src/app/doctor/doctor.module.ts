@@ -16,6 +16,7 @@ import { MyAppointmentsComponent } from './my-appointments/my-appointments.compo
 import { AppointmentModule } from '../appointment/appointment.module';
 import { MatterialUiModule } from '../shared/matterial-ui/matterial-ui.module';
 import { MatChipsModule } from '@angular/material/chips';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 
@@ -40,7 +41,8 @@ import { MatChipsModule } from '@angular/material/chips';
     MatIconModule,
     AppointmentModule,
     MatterialUiModule,
-    MatChipsModule 
+    MatChipsModule,
+    ReactiveFormsModule 
   ]
 })
 export class DoctorModule { }

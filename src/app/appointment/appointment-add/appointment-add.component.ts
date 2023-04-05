@@ -16,6 +16,7 @@ export class AppointmentAddComponent {
   times: string[] = this.generateTimes('05:00', '12:00');
   startTime!:string;
   endTime!:string;
+  patientId!:number;
   constructor(private fb: FormBuilder,public appointmentsServices:AppointmentService,public activatedRoute:ActivatedRoute,public doctorServices:DoctorService ) {
     this.createReservationForm();
     
@@ -67,10 +68,11 @@ export class AppointmentAddComponent {
   }
 
   ngOnInit(){
-    this.activatedRoute.params.subscribe(doc=>{
+    this.patientId=Number(sessionStorage.getItem("userId"))
+    this.activatedRoute.params.subscribe((doc:any)=>{
       console.log(doc['id']);
         this.doctorId=doc['id'];
-        this.doctorServices.getDoctorById(doc['id']).subscribe(data=>{
+        this.doctorServices.getDoctorById(doc['id']).subscribe((data:any)=>{
           console.log(data.schedule)
           this.timeSlots=data.schedule.timeSlots;
         })
@@ -81,7 +83,7 @@ export class AppointmentAddComponent {
 
     console.log(this.reservationForm.value);
     this.reservationForm.get('doctor')?.setValue(this.doctorId);
-    this.reservationForm.get('patient')?.setValue(4);
+    this.reservationForm.get('patient')?.setValue(this.patientId);//patientid
     this.appointmentsServices.addApointment(this.reservationForm.value).subscribe(data=>{
       console.log(data);
     },error=>{

@@ -9,18 +9,23 @@ import { PatientService } from 'src/app/services/patient.service';
   styleUrls: ['./doctor-profile.component.css'],
 })
 export class DoctorProfileComponent {
-  doctor!: IDoctor;
-  docAppointmentes: any;
-  patientInfo: any;
+  doctor!:IDoctor;
+  docAppointmentes:any;
+  patientInfo:any;
+  doctorId!:number;
   constructor(
     public doctorService: DoctorService,
     public patientService: PatientService
   ) {}
 
-  ngOnInit() {
-    this.doctorService.getDoctorById(109).subscribe((data) => {
-      this.doctor = data;
-      this.docAppointmentes = data.appointments;
-    });
-  }
+  ngOnInit(){
+    this.doctorId=Number(sessionStorage.getItem("userId"))
+     this.doctorService.getDoctorById(1).subscribe((data:any)=>{
+       this.doctor=data;
+       this.docAppointmentes=data.appointments
+       console.log(this.doctor)
+     },error=>{
+      console.log(error)
+     })
+   }
 }

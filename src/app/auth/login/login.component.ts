@@ -48,7 +48,7 @@ export class LoginComponent {
               this.router.navigate(['/employee']);
               break;
             case 'Doctor':
-              this.router.navigate(['/doctors']);
+              this.router.navigate(['/doctor/Profile']);
               break;
             case 'Patient':
               this.router.navigate(['/patient']);

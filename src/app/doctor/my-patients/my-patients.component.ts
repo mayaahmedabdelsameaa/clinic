@@ -19,7 +19,7 @@ export class MyPatientsComponent {
   }
 
   ngOnInit(){ 
-    this.doctorService.getDoctorById(109).subscribe(data=>{
+    this.doctorService.getDoctorById(109).subscribe((data:any)=>{
       this.doctor=data;
       this.docAppointmentes=data.appointments
     })

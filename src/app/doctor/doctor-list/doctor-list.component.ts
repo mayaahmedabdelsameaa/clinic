@@ -13,7 +13,7 @@ export class DoctorListComponent {
   constructor(public doctorService: DoctorService) {}
 
   ngOnInit(){
-    this.doctorService.getAllDoctors().subscribe(data=>{
+    this.doctorService.getAllDoctors().subscribe((data:any)=>{
       console.log(data);
       this.doctors = data;
 
