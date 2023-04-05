@@ -18,7 +18,7 @@ export class DoctorScheduleComponent {
   ngOnInit(){
    this.activatedRoute.params.subscribe(doc=>{
      console.log(doc['id']);
-     this.doctorServices.getDoctorById(doc['id']).subscribe(data=>{
+     this.doctorServices.getDoctorById(doc['id']).subscribe((data:any)=>{
        this.doctor=data;
        this.doctorSchedule=this.doctor.schedule.timeSlots;
       console.log(this.doctorSchedule);

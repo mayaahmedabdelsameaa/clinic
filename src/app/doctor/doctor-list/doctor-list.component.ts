@@ -14,7 +14,7 @@ export class DoctorListComponent {
   
   }
   ngOnInit(){
-    this.doctorService.getAllDoctors().subscribe(data=>{
+    this.doctorService.getAllDoctors().subscribe((data:any)=>{
       console.log(data);
         this.doctors=data;
       
