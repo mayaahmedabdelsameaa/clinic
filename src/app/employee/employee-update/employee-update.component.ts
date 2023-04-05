@@ -16,13 +16,13 @@ import {
 @Component({
   selector: 'app-employee-update',
   templateUrl: './employee-update.component.html',
-  styleUrls: ['./employee-update.component.css']
+  styleUrls: ['./employee-update.component.css'],
 })
 export class EmployeeUpdateComponent {
   emp!: any;
-  empid!:number;
+  empid!: number;
   addingForm!: FormGroup;
-  clinics:any;
+  clinics: any;
   constructor(
     private employeeService: EmployeeService,
     private routes: Router,
@@ -87,11 +87,10 @@ export class EmployeeUpdateComponent {
             ],
           ],
         }),
-      },
+      }
       // { validator: passwordValidator }
     );
   }
-
 
   getFname() {
     return this.addingForm.get('firstName');
@@ -181,6 +180,5 @@ export class EmployeeUpdateComponent {
       this.getBuilding()?.patchValue(this.emp.address.building);
       this.getStreet()?.patchValue(this.emp.address.street);
     });
-
   }
 }

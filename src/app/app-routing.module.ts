@@ -5,17 +5,10 @@ import { NotFoundComponent } from './shared/notfound/not-found/not-found.compone
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
-
   { path: '', redirectTo: '/home', pathMatch: 'full' },
-
   {
     path: 'auth',
     loadChildren: () => import('./auth/auth.module').then((e) => e.AuthModule),
-  },
-  {
-    path: 'admin',
-    loadChildren: () =>
-      import('./admin/admin.module').then((e) => e.AdminModule),
   },
   {
     path: 'employee',
@@ -48,7 +41,11 @@ const routes: Routes = [
     loadChildren: () =>
       import('./clinic/clinic.module').then((e) => e.ClinicModule),
   },
-
+  {
+    path: 'medicine',
+    loadChildren: () =>
+      import('./medicine/medicine.module').then((e) => e.MedicineModule),
+  },
   {
     path: 'doctor',
     loadChildren: () =>

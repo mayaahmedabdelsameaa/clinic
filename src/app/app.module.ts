@@ -1,4 +1,4 @@
-import { NgModule} from '@angular/core';
+import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule } from '@angular/router';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
@@ -9,6 +9,7 @@ import { MatterialUiModule } from 'src/app/shared/matterial-ui/matterial-ui.modu
 import { NotFoundComponent } from './shared/notfound/not-found/not-found.component';
 import { HeaderComponent } from './core/header/header.component';
 import { FooterComponent } from './core/footer/footer.component';
+// import { EmployeeModule } from './employee/employee.module';
 import { EmployeeModule } from './employee/employee.module';
 import { DoctorModule } from './doctor/doctor.module';
 import { ClinicModule } from './clinic/clinic.module';
@@ -49,7 +50,6 @@ import { ReactiveFormsModule } from '@angular/forms';
     DoctorModule,
     HttpClientModule,
     ReactiveFormsModule,
-
   ],
   providers: [],
   bootstrap: [AppComponent],
