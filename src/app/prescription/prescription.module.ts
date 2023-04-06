@@ -7,6 +7,7 @@ import { PrescriptionDetailsComponent } from './prescription-details/prescriptio
 import { PrescriptionListByDoctorComponent } from './prescription-list-by-doctor/prescription-list-by-doctor.component';
 import { PrescriptionListByPatientComponent } from './prescription-list-by-patient/prescription-list-by-patient.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { PrescriptionListComponent } from './prescription-list/prescription-list.component';
 
 
 @NgModule({
@@ -14,7 +15,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     PrescriptionAddComponent,
     PrescriptionDetailsComponent,
     PrescriptionListByDoctorComponent,
-    PrescriptionListByPatientComponent
+    PrescriptionListByPatientComponent,
+    PrescriptionListComponent
   ],
   imports: [
     CommonModule,

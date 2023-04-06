@@ -32,12 +32,12 @@ export class LoginComponent {
     const password = this.loginForm.controls['password'].value;
     this.authService.login(email, password).subscribe(
       (data) => {
-        console.log(data);
+        // console.log(data);
         this.token = data.token;
         this.decodedData = this.jwtHelper.decodeToken(this.token);
 
-        console.log(this.decodedData);
-        console.log(this.token);
+        // console.log(this.decodedData);
+        // console.log(this.token);
 
         if (this.token) {
           sessionStorage.setItem('token', this.token);
@@ -64,7 +64,7 @@ export class LoginComponent {
       },
       (error) => {
         this.error = error;
-        alert(JSON.stringify(error));
+        // alert(JSON.stringify(error));
       }
     );
   }

@@ -7,3 +7,6 @@
 .card ul li  strong{
   color: var(--title);
 }
+strong{
+  color: var(--submain);
+}
