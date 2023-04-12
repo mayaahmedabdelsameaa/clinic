@@ -1,9 +1,12 @@
 import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
+import { Route, RouterModule, Routes } from '@angular/router';
 import { MainMedicineComponent } from './main-medicine/main-medicine.component';
 import { SupplementComponent } from './supplement/supplement.component';
 import { MedicineComponent } from './medicine/medicine.component';
 import { HerbsComponent } from './herbs/herbs.component';
+import { ProductHeaderComponent } from './product-header/product-header.component';
+import { CartComponent } from './cart/cart.component';
+import { ListMedicineComponent } from './list-medicine/list-medicine.component';
 
 const routes: Routes = [
   {
@@ -15,6 +18,9 @@ const routes: Routes = [
       { path: 'herbs', component: HerbsComponent },
     ],
   },
+  { path: 'product', component: ProductHeaderComponent },
+  { path: 'cart', component: CartComponent },
+  { path: 'list', component: ListMedicineComponent },
 ];
 
 @NgModule({

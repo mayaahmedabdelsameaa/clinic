@@ -14,14 +14,12 @@ export class ClinicHomeComponent implements OnInit {
   constructor(private clinicServices: ClinicService) {}
 
   ngOnInit(): void {
-    this.clinicServices.getAll().subscribe((data) => {
-      console.table(data.data);
-      this.clinic = data.data;
+    this.clinicServices.getAll().subscribe((data: any) => {
+      console.log(data);
+      this.clinic = data;
     });
   }
-  GetImage() {
-    this.clinic.find((e) => e.image);
-  }
+
   customOptions: OwlOptions = {
     loop: true,
     mouseDrag: true,

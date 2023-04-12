@@ -19,7 +19,7 @@ export class ClinicService {
 
   base = environment.baseHttp + 'clinic';
   getAll() {
-    return this.http.get<Clinic[]>(this.base, this.httpOptions);
+    return this.http.get<any[]>(this.base, this.httpOptions);
   }
   getById(id: number) {
     return this.http.get<Clinic>(this.base + '/' + id, this.httpOptions);
@@ -34,5 +34,4 @@ export class ClinicService {
       this.httpOptions
     );
   }
-  
 }
