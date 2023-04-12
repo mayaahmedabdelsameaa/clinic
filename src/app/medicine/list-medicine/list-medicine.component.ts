@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { MatTableDataSource } from '@angular/material/table';
 import { Medicine } from 'src/app/models/medicine';
 import { MedicineService } from 'src/app/services/medicine.service';
 let medicine: Medicine[] = [];
@@ -30,12 +29,10 @@ export class ListMedicineComponent implements OnInit {
     'image',
     'offer',
   ];
-  dataSource = new MatTableDataSource<Medicine>([]);
   constructor(private medicineService: MedicineService) {}
   ngOnInit(): void {
     this.medicineService.getAllMedicine().subscribe((data) => {
       medicine = data.data;
     });
-    this.dataSource.data = medicine;
   }
 }
