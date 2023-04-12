@@ -10,13 +10,14 @@ export class DoctorService {
 private baseUrl = 'http://localhost:3000/doctors';
 httpOptions:any;
 
-  constructor(public http: HttpClient) { 
+  constructor(public http: HttpClient) {
     this.httpOptions = {
       headers: new HttpHeaders({
         'Content-Type': 'application/json',
         authorization: 'Bearer ' + sessionStorage.getItem('token'),
       }),
     };
+
   }
 
   getAllDoctors() {
@@ -32,6 +33,10 @@ httpOptions:any;
     return this.http.patch(`${this.baseUrl}/${udoctor.Doc_id}`,udoctor,this.httpOptions)
   }
   addDoctor(doctor:FormData):Observable<any>{
-    return this.http.post<any>(this.baseUrl,doctor,this.httpOptions);
+    return this.http.post<any>(this.baseUrl,doctor,{
+      headers: new HttpHeaders({
+        authorization: 'Bearer ' + sessionStorage.getItem('token'),
+      }),
+    });
   }
 }

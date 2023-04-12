@@ -27,7 +27,7 @@ export class EmployeeListComponent {
   }
   UpdateEmp(id:number){
     sessionStorage.setItem('empid', JSON.stringify(id));
-    this.router.navigate(['/employee/edit']);
+    this.router.navigate(['/employee/update']);
   }
 
   Delete(id: number) {

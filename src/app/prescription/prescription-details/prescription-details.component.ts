@@ -20,10 +20,12 @@ export class PrescriptionDetailsComponent {
 
   ngOnInit(): void {
     this.id = this.route.params.subscribe((prescription) => {
-      this.prescriptionService.getById(3).subscribe(
+      this.prescriptionService.getById(parseInt(sessionStorage.getItem('prescriptionId')!)).subscribe(
         (b) => {
           this.data = b;
+          this.medecines = this.data.medecineId;
           console.log(this.data)
+          console.log(this.medecines)
         },
         (error) => {
           this.error = true;

@@ -14,6 +14,7 @@ export class Prescription {
       address: { city: string; street: string; buildingNumber: number };
       doctors: { _id: number; firstName: string; lastName: string };
     },
-    public medicineId: [{ name: string }]
+    public medicineId: [{ name: string }],
+    public patientId: {fname: string, lname: string, age: number}
   ) {}
 }
